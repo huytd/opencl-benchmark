@@ -61,4 +61,36 @@ CPU: 0.216143ms
 GPU: 0.000545ms
 ```
 
+### MacBook Pro Late 2013
+
+On MacBook Pro Late 2013:
+
+```
+CPU: 2.4 GHz Intel Core i5
+GPU: 1536 Intel Iris
+```
+
+Runtime result:
+
+```
+CPU: 0.291636ms
+GPU: 0.001999ms
+```
+
+### MacBook Pro Mid 2012
+
+On MacBook Pro Mid 2012:
+
+```
+CPU: 2.5 GHz Intel Core i5
+GPU: 1536 MB Intel HD Graphics 4000
+```
+
+Runtime result:
+
+```
+CPU: 0.284128ms
+GPU: 0.001589ms
+```
+
 ![](compare.png)

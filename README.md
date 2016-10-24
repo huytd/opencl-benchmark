@@ -1,6 +1,6 @@
 # OpenCL Performance Test
 
-This is a simple test to compare the performance between CPU and GPU compuation.
+This is a simple test to compare the performance between CPU and GPU computation.
 
 There are two program `cpu.c` and `gpu.c`, both of them will calculate the summary of numbers from `0` to `100 million`. In the end, the program will display the elapsed time.
 

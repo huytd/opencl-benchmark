@@ -30,6 +30,7 @@ Run test on GPU:
 
 ## What's your test result?
 
+### iMac Late 2015
 I ran the test on an iMac Late 2015, which has:
 
 ```
@@ -43,3 +44,21 @@ The runtime result is:
 CPU: 0.315500ms
 GPU: 0.000862ms
 ```
+
+### MacBook Pro Mid 2015
+
+Another test on MacBook Pro Mid 2015:
+
+```
+CPU: 2.5 GHz Intel Core i7
+GPU: 1536 MB Intel Iris Pro
+```
+
+Runtime result:
+
+```
+CPU: 0.216143ms
+GPU: 0.000545ms
+```
+
+![](compare.png)

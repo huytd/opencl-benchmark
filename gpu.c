@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <OpenCL/opencl.h>
 #include <time.h>
+
+#ifdef __APPLE__
+#include <OpenCL/opencl.h>
+#else
+#include <CL/cl.h>
+#endif
 
 #define MAX_SOURCE_SIZE (0x100000)
 
@@ -37,15 +42,10 @@ int main() {
   ret = clGetDeviceIDs(platform_id, CL_DEVICE_TYPE_DEFAULT, 1, &device_id, &ret_num_devices);
 
   context = clCreateContext(NULL, 1, &device_id, NULL, NULL, &ret);
-
   command_queue = clCreateCommandQueue(context, device_id, 0, &ret);
-
   memobj = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_mem), NULL, &ret);
-
   program = clCreateProgramWithSource(context, 1, (const char **)&source_str, (const size_t *)&source_size, &ret);
-
   ret = clBuildProgram(program, 1, &device_id, NULL, NULL, NULL);
-
   kernel = clCreateKernel(program, "hello", &ret);
 
   ret = clSetKernelArg(kernel, 0, sizeof(cl_mem), (void*)&memobj);
